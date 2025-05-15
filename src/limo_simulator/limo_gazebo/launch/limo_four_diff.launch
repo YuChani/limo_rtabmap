@@ -2,8 +2,7 @@
 <launch>
     <include file="$(find limo_gazebo)/launch/apartment.launch"/>
 
-    <!-- <param name="robot_description" command="$(find xacro)/xacro '$(find limo_description)/urdf/limo_four_diff.xacro'" /> -->
-    <param name="robot_description" command="$(find xacro)/xacro '$(find limo_description)/urdf/limo_velodyne_diff.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro '$(find limo_description)/urdf/limo_four_diff.xacro'" />
 
     <arg name="x" default="0.0"/>
     <arg name="y" default="0.0"/>
