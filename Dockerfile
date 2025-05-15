@@ -73,7 +73,6 @@ RUN mkdir -p /root/catkin_ws \
     && cp -a /tmp/limo_ws/. /root/catkin_ws/ \
     && /bin/bash -c "source /opt/ros/noetic/setup.bash && rosdep install --from-paths /root/catkin_ws/src --ignore-src -r -y || true"
 
-
 # 7. ROS 워크스페이스 자동 로딩
 RUN echo "source /root/catkin_ws/devel/setup.bash" >> /root/.bashrc
 
