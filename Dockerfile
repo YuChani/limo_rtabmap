@@ -61,6 +61,7 @@ RUN apt update && apt install -y \
     ros-noetic-turtlebot3-description \
     ros-noetic-turtlebot3-gazebo \
     ros-noetic-turtlebot3-navigation \
+    ros-noetic-rtabmap ros-noetic-rtabmap-ros \
     && rm -rf /var/lib/apt/lists/*
 
 # 5. ROS 환경 설정 및 rosdep 초기화

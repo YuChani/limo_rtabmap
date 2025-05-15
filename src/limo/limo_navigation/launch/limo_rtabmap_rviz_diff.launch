@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- RTAB-Map and Move Base -->
+    <include file="$(find limo_navigation)/launch/limo_rtabmap.launch">
+        <arg name="rviz" value="false" /> <!-- RViz는 아래에서 따로 실행 -->
+        <arg name="localization" value="true" />
+    </include>
+
+    <include file="$(find limo_navigation)/launch/limo_move_base_diff.launch">
+        <arg name="map_topic" value="rtabmap/grid_map" />
+    </include>
+
+    <!-- RViz with RTAB-Map config -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find limo_viz)/rviz/rtabmap.rviz" />
+
+</launch>
